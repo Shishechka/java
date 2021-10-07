@@ -1,0 +1,52 @@
+package lab3;
+
+public class cveti {
+    public static void main(String[] msi) {
+        int price = 1;
+        Flower alenkiy_chvetochek = new Alenkiy_Chvetochek(price);
+        Flower cvetik_semicvetik = new Cvetik_Semicvetik(price);
+        Flower kameniy_cvetok = new Kameniy_Cvetok(price);
+        Flower[] bouquet1 = { alenkiy_chvetochek, kameniy_cvetok, cvetik_semicvetik, kameniy_cvetok};
+        Flower[] bouquet2 = { cvetik_semicvetik, cvetik_semicvetik, kameniy_cvetok, kameniy_cvetok };
+        Flower[] bouquet3 = { alenkiy_chvetochek, kameniy_cvetok, alenkiy_chvetochek, alenkiy_chvetochek, kameniy_cvetok, alenkiy_chvetochek };
+        System.out.print("Количество проданных цветов: ");
+        System.out.println(bouquet1.length + bouquet2.length + bouquet3.length);
+    }
+    public static class Flower {
+        int price;
+        public Flower(int price) {
+            this.price = price;
+        }
+        public int getPrice() {
+            return price;
+        }
+    }
+    public static class Alenkiy_Chvetochek extends Flower {
+        int price;
+        public Alenkiy_Chvetochek(int price) {
+            super(price);
+        }
+        @Override
+        public int getPrice() {
+            return price * 200;
+        }
+    }
+    public static class Cvetik_Semicvetik extends Flower {
+        public Cvetik_Semicvetik(int price) {
+            super(price);
+        }
+        @Override
+        public int getPrice() {
+            return price * 250;
+        }
+    }
+    public static class Kameniy_Cvetok extends Flower {
+        public Kameniy_Cvetok(int price) {
+            super(price);
+        }
+        @Override
+        public int getPrice() {
+            return price * 299;
+        }
+    }
+}
