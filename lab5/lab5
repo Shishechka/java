@@ -21,7 +21,7 @@ public class main {
         System.out.println(FirstUnrepeatSym("hell", "he"));
         System.out.println(SumOf3int("suuuccess"));
         System.out.println(SumInt("123"));
-        System.out.println(DeleteThanWrite("suuucces"));
+        System.out.println(DeleteFirst("suuucces"));
         System.out.println(SecondOftenSym("suuuccess"));
     }
 
@@ -127,7 +127,7 @@ public class main {
         return 0;
     }
 
-    public static char DeleteThanWrite(String str) {
+    public static char DeleteFirst(String str) {
         HashMap<Character, Integer> map = new HashMap<>();
         int i = -1;
         while (++i < str.length())
