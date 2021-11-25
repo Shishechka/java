@@ -1,4 +1,4 @@
-package lesson6.task1;
+package lab6.task1;
 
 public class Apple extends Fruit {
 
