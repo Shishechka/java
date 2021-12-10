@@ -17,4 +17,3 @@ public class Product {
         return (result);
     }
 }
-© 2021 GitHub, Inc.
